@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE847F22A689180016A5A8 /* AppDelegate.swift */; };
+		CDFE848222A689180016A5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE848122A689180016A5A8 /* ViewController.swift */; };
+		CDFE848522A689180016A5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848322A689180016A5A8 /* Main.storyboard */; };
+		CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848622A689190016A5A8 /* Assets.xcassets */; };
+		CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */; };
+		CDFE849522A689190016A5A8 /* TrendCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE849422A689190016A5A8 /* TrendCatalogTests.swift */; };
+		CDFE84A022A689190016A5A8 /* TrendCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE849F22A689190016A5A8 /* TrendCatalogUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDFE849122A689190016A5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDFE847422A689180016A5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDFE847B22A689180016A5A8;
+			remoteInfo = TrendCatalog;
+		};
+		CDFE849C22A689190016A5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDFE847422A689180016A5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDFE847B22A689180016A5A8;
+			remoteInfo = TrendCatalog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDFE847C22A689180016A5A8 /* TrendCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFE847F22A689180016A5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDFE848122A689180016A5A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDFE848422A689180016A5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDFE848622A689190016A5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDFE848922A689190016A5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDFE848B22A689190016A5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFE849022A689190016A5A8 /* TrendCatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendCatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFE849422A689190016A5A8 /* TrendCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCatalogTests.swift; sourceTree = "<group>"; };
+		CDFE849622A689190016A5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFE849B22A689190016A5A8 /* TrendCatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendCatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDFE849F22A689190016A5A8 /* TrendCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCatalogUITests.swift; sourceTree = "<group>"; };
+		CDFE84A122A689190016A5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDFE847922A689180016A5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE848D22A689190016A5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE849822A689190016A5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDFE847322A689180016A5A8 = {
+			isa = PBXGroup;
+			children = (
+				CDFE847E22A689180016A5A8 /* TrendCatalog */,
+				CDFE849322A689190016A5A8 /* TrendCatalogTests */,
+				CDFE849E22A689190016A5A8 /* TrendCatalogUITests */,
+				CDFE847D22A689180016A5A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDFE847D22A689180016A5A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDFE847C22A689180016A5A8 /* TrendCatalog.app */,
+				CDFE849022A689190016A5A8 /* TrendCatalogTests.xctest */,
+				CDFE849B22A689190016A5A8 /* TrendCatalogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDFE847E22A689180016A5A8 /* TrendCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				CDFE847F22A689180016A5A8 /* AppDelegate.swift */,
+				CDFE848122A689180016A5A8 /* ViewController.swift */,
+				CDFE848322A689180016A5A8 /* Main.storyboard */,
+				CDFE848622A689190016A5A8 /* Assets.xcassets */,
+				CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */,
+				CDFE848B22A689190016A5A8 /* Info.plist */,
+			);
+			path = TrendCatalog;
+			sourceTree = "<group>";
+		};
+		CDFE849322A689190016A5A8 /* TrendCatalogTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDFE849422A689190016A5A8 /* TrendCatalogTests.swift */,
+				CDFE849622A689190016A5A8 /* Info.plist */,
+			);
+			path = TrendCatalogTests;
+			sourceTree = "<group>";
+		};
+		CDFE849E22A689190016A5A8 /* TrendCatalogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDFE849F22A689190016A5A8 /* TrendCatalogUITests.swift */,
+				CDFE84A122A689190016A5A8 /* Info.plist */,
+			);
+			path = TrendCatalogUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDFE847B22A689180016A5A8 /* TrendCatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFE84A422A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalog" */;
+			buildPhases = (
+				CDFE847822A689180016A5A8 /* Sources */,
+				CDFE847922A689180016A5A8 /* Frameworks */,
+				CDFE847A22A689180016A5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrendCatalog;
+			productName = TrendCatalog;
+			productReference = CDFE847C22A689180016A5A8 /* TrendCatalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDFE848F22A689190016A5A8 /* TrendCatalogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFE84A722A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalogTests" */;
+			buildPhases = (
+				CDFE848C22A689190016A5A8 /* Sources */,
+				CDFE848D22A689190016A5A8 /* Frameworks */,
+				CDFE848E22A689190016A5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDFE849222A689190016A5A8 /* PBXTargetDependency */,
+			);
+			name = TrendCatalogTests;
+			productName = TrendCatalogTests;
+			productReference = CDFE849022A689190016A5A8 /* TrendCatalogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDFE849A22A689190016A5A8 /* TrendCatalogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFE84AA22A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalogUITests" */;
+			buildPhases = (
+				CDFE849722A689190016A5A8 /* Sources */,
+				CDFE849822A689190016A5A8 /* Frameworks */,
+				CDFE849922A689190016A5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDFE849D22A689190016A5A8 /* PBXTargetDependency */,
+			);
+			name = TrendCatalogUITests;
+			productName = TrendCatalogUITests;
+			productReference = CDFE849B22A689190016A5A8 /* TrendCatalogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDFE847422A689180016A5A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Антон Хомяков";
+				TargetAttributes = {
+					CDFE847B22A689180016A5A8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CDFE848F22A689190016A5A8 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CDFE847B22A689180016A5A8;
+					};
+					CDFE849A22A689190016A5A8 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = CDFE847B22A689180016A5A8;
+					};
+				};
+			};
+			buildConfigurationList = CDFE847722A689180016A5A8 /* Build configuration list for PBXProject "TrendCatalog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDFE847322A689180016A5A8;
+			productRefGroup = CDFE847D22A689180016A5A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDFE847B22A689180016A5A8 /* TrendCatalog */,
+				CDFE848F22A689190016A5A8 /* TrendCatalogTests */,
+				CDFE849A22A689190016A5A8 /* TrendCatalogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDFE847A22A689180016A5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */,
+				CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */,
+				CDFE848522A689180016A5A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE848E22A689190016A5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE849922A689190016A5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDFE847822A689180016A5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFE848222A689180016A5A8 /* ViewController.swift in Sources */,
+				CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE848C22A689190016A5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFE849522A689190016A5A8 /* TrendCatalogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE849722A689190016A5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFE84A022A689190016A5A8 /* TrendCatalogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDFE849222A689190016A5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDFE847B22A689180016A5A8 /* TrendCatalog */;
+			targetProxy = CDFE849122A689190016A5A8 /* PBXContainerItemProxy */;
+		};
+		CDFE849D22A689190016A5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDFE847B22A689180016A5A8 /* TrendCatalog */;
+			targetProxy = CDFE849C22A689190016A5A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDFE848322A689180016A5A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDFE848422A689180016A5A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDFE848922A689190016A5A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDFE84A222A689190016A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDFE84A322A689190016A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDFE84A522A689190016A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDFE84A622A689190016A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDFE84A822A689190016A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendCatalog.app/TrendCatalog";
+			};
+			name = Debug;
+		};
+		CDFE84A922A689190016A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendCatalog.app/TrendCatalog";
+			};
+			name = Release;
+		};
+		CDFE84AB22A689190016A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrendCatalog;
+			};
+			name = Debug;
+		};
+		CDFE84AC22A689190016A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TrendCatalogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-.TrendCatalogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrendCatalog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDFE847722A689180016A5A8 /* Build configuration list for PBXProject "TrendCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFE84A222A689190016A5A8 /* Debug */,
+				CDFE84A322A689190016A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFE84A422A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFE84A522A689190016A5A8 /* Debug */,
+				CDFE84A622A689190016A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFE84A722A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFE84A822A689190016A5A8 /* Debug */,
+				CDFE84A922A689190016A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDFE84AA22A689190016A5A8 /* Build configuration list for PBXNativeTarget "TrendCatalogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDFE84AB22A689190016A5A8 /* Debug */,
+				CDFE84AC22A689190016A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDFE847422A689180016A5A8 /* Project object */;
+}
