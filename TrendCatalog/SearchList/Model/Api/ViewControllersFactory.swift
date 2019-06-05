@@ -14,10 +14,8 @@ class ViewControllersFactory {
         
         let view: SearchListViewController = SearchListViewController()
         let dataProvider: SearchListDataProviderProtocol = SearchListDataProvider()
-        //let storyImagesDownloader: ImagesDownloaderProtocol = ImagesDownloader()
         let presenter = SearchListPresenter(view: view,
                                          searchListDataProvider: dataProvider)
-                                         /*storyImagesDownloader: storyImagesDownloader*/
         view.presenter = presenter
         
         return view

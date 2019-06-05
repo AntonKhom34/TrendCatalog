@@ -11,8 +11,12 @@ import UIKit
 class CommentCell: UITableViewCell {
 
     @IBOutlet weak var lable1: UILabel!
-    
     @IBOutlet weak var lable2: UILabel!
+    @IBOutlet weak var regionNameLabel: UILabel!
+
+    func setRegionName(_ name: String) {
+        regionNameLabel.text = name
+    }
     
 }
 
