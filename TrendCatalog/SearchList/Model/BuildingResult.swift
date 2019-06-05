@@ -10,5 +10,5 @@ import Foundation
 
 struct BuildingResult: Codable {
     var image: URL
-    var region: BildingRegion
+    var region: BuildingRegion
 }

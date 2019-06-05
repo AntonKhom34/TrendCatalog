@@ -1,5 +1,5 @@
 //
-//  BildingRegion.swift
+//  BuildingRegion.swift
 //  TrendCatalog
 //
 //  Created by Антон Хомяков on 04/06/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct BildingRegion: Codable {
+struct BuildingRegion: Codable {
     var name: String
 }
