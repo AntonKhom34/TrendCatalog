@@ -9,4 +9,5 @@
 import UIKit
 
 protocol SearchListViewProtocol: class {
+    func reloadTable()
 }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SearchListViewController: UIViewController {
-    private var buildings: [BuildingResult] = []
-    
-    
+class SearchListViewController: UIViewController {    
+    @IBAction func reloadTab(_ sender: Any) {
+        tableView.reloadData()
+    }
     
     fileprivate static let commentCellId = "commentCell"
     
@@ -26,52 +26,8 @@ class SearchListViewController: UIViewController {
         tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
                            forCellReuseIdentifier: SearchListViewController.commentCellId)
     }
-    @IBAction func getIt(_ sender: Any) {
-        getBuildings(count: 20) { [weak self] buildings in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.buildings = buildings
-            strongSelf.reloadTable()
-        }
-    }
-
-    // MARK: - Private
-
-    private func getBuildings(count: Int, onComplete: @escaping ([BuildingResult]) -> Void) {
-        
-        guard let url = URL(string: "http://api.trend-dev.ru/v3_1/blocks/search?show_type=list&count=\(count)&offset=1")
-            else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let _ = error {
-                DispatchQueue.main.async {
-                    onComplete([])
-                }
-                return
-            }
-            
-            guard let data = data else {
-                DispatchQueue.main.async {
-                    onComplete([])
-                }
-                return
-            }
-            
-            do {
-                let searchResult = try JSONDecoder().decode(SearchDataResult.self, from: data)
-                DispatchQueue.main.async {
-                    onComplete(searchResult.data.buildings)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    onComplete([])
-                }
-            }
-            }.resume()
-    }
-
-    private func reloadTable() {
+    
+    func reloadTable() {
         tableView.reloadData()
     }
     
@@ -79,7 +35,7 @@ class SearchListViewController: UIViewController {
 
 extension SearchListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return buildings.count
+        return presenter.getBuildingItemsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,17 +45,39 @@ extension SearchListViewController: UITableViewDataSource {
         guard let commentCell = cell as? CommentCell else {
             return UITableViewCell(frame: .zero)
         }
-        let building = buildings[indexPath.row]
-        commentCell.setRegionName(building.region.name)
         
-//        guard let commentItem = presenter?.getCommentItem(atIndex: indexPath.item) else {
-//            return UITableViewCell(frame: .zero)
-//        }
-//        
-//        commentCell.commentText = commentItem.textAttributedString
-//        commentCell.author = commentItem.author
-//        commentCell.dateString = commentItem.getFormattedDateString()
-        
+        if let building = presenter?.getBuildingItem(atIndex: indexPath.row) {
+            commentCell.setRegionName(building.region.name)
+//            commentCell.setDeadline(building.deadline ?? "Не известно")
+            commentCell.setName(building.name)
+            commentCell.setDeveloper(building.builder.name)
+            commentCell.setSubway("\(building.subways[0].name) \(building.subways[0].distance_timing) мин.")
+            commentCell.setImage(imageName: building.image)
+            
+            commentCell.setNullApartment(nullApartment:
+                building.min_prices?[0].rooms ?? "None")
+            
+            commentCell.setFirstRoomApartment(firstRoomApartment:
+                building.min_prices?[1].rooms ?? "None")
+            
+            commentCell.setSecondRoomApartment(secondRoomApartment:
+                building.min_prices?[2].rooms ?? "None")
+            
+//            commentCell.setThirdRoomApartment(thirdRoomApartment:
+//                building.min_prices?[3].rooms ?? "None")
+            
+            commentCell.setNullApartmentCost(nullApartmentCost:
+                building.min_prices?[0].price ?? 0)
+            
+            commentCell.setFirstRoomApartmentCost(firstRoomApartmentCost:
+                building.min_prices?[1].price ?? 0)
+            
+            commentCell.setSecondRoomApartmentCost(secondRoomApartmentCost:
+                building.min_prices?[2].price ?? 0)
+            
+//            commentCell.setThirdRoomApartmentCost(thirdRoomApartmentCost:
+//                building.min_prices?[3].price ?? 0)
+        }
         
         return cell
     }

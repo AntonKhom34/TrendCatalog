@@ -24,15 +24,22 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGA-Me-NWQ">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTC-wD-QRk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <color key="backgroundColor" red="0.74183737982988562" green="0.20912994965717768" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="frI-bi-Iag"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Re-O0N">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <rect key="frame" x="0.0" y="60" width="414" height="30"/>
                             <state key="normal" title="Button"/>
                             <connections>
-                                <action selector="getIt:" destination="-1" eventType="touchUpInside" id="z0y-Zo-fn4"/>
+                                <action selector="reloadTab:" destination="-1" eventType="touchUpInside" id="Yka-LT-FeI"/>
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-f8-8DO">
-                            <rect key="frame" x="0.0" y="30" width="414" height="788"/>
+                            <rect key="frame" x="0.0" y="90" width="414" height="728"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -41,8 +48,11 @@
                         <constraint firstAttribute="trailing" secondItem="H6N-Re-O0N" secondAttribute="trailing" id="5vQ-e7-odX"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="top" secondItem="H6N-Re-O0N" secondAttribute="bottom" id="EkH-Sj-Vcf"/>
                         <constraint firstItem="H6N-Re-O0N" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="Ina-wI-FTF"/>
+                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="LTC-wD-QRk" secondAttribute="bottom" id="K0v-2E-Oo3"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="RLA-UQ-qmR"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="bGA-Me-NWQ" secondAttribute="top" id="dmd-PQ-EqK"/>
+                        <constraint firstItem="LTC-wD-QRk" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="ZwM-wA-EoN"/>
+                        <constraint firstItem="LTC-wD-QRk" firstAttribute="top" secondItem="bGA-Me-NWQ" secondAttribute="top" id="e0p-hq-uDT"/>
+                        <constraint firstAttribute="trailing" secondItem="LTC-wD-QRk" secondAttribute="trailing" id="gKX-1x-jyL"/>
                         <constraint firstAttribute="bottom" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="kUq-og-NNF"/>
                         <constraint firstAttribute="trailing" secondItem="U1c-f8-8DO" secondAttribute="trailing" id="zTw-sx-u3u"/>
                     </constraints>

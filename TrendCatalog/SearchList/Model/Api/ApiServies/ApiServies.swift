@@ -49,13 +49,14 @@ class ApiServies {
     
 // MARK: - Public
     
-    internal func setModelBuildings(count: Int) {
+    internal func getModelBuildings(count: Int) -> [BuildingResult] {
         getBuildings(count: count) { [weak self] buildings in
             guard let strongSelf = self else {
                 return
             }
             strongSelf.buildings = buildings
         }
+        return buildings
     }
     
 }

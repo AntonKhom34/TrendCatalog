@@ -9,4 +9,6 @@
 import Foundation
 
 protocol SearchListPresenterProtocol {
+    func getBuildingItem(atIndex: Int) -> BuildingResultProtocol?
+    func getBuildingItemsCount() -> Int
 }

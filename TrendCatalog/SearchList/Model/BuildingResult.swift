@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct BuildingResult: Codable {
+struct BuildingResult: BuildingResultProtocol, Codable {
+    var min_prices: [BuildingMinPrice]?
+    var subways: [BuildingSubways]
+    var name: String
+//    var deadline: String?
+    var builder: BuildingBuilder
     var image: URL
     var region: BuildingRegion
 }

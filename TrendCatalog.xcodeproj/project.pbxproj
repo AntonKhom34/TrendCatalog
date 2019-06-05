@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDA5D9DD22A7E18F002694E9 /* BuildingResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9DC22A7E18F002694E9 /* BuildingResultProtocol.swift */; };
+		CDA5D9DF22A7FBB5002694E9 /* BuildingSubways.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9DE22A7FBB5002694E9 /* BuildingSubways.swift */; };
+		CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */; };
+		CDA5D9E322A80BD8002694E9 /* BuildingSubwaysArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */; };
+		CDA5D9E722A837EC002694E9 /* BuildingMinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E622A837EC002694E9 /* BuildingMinPrice.swift */; };
 		CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE847F22A689180016A5A8 /* AppDelegate.swift */; };
 		CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848622A689190016A5A8 /* Assets.xcassets */; };
 		CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */; };
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDA5D9DC22A7E18F002694E9 /* BuildingResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingResultProtocol.swift; sourceTree = "<group>"; };
+		CDA5D9DE22A7FBB5002694E9 /* BuildingSubways.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSubways.swift; sourceTree = "<group>"; };
+		CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingBuilder.swift; sourceTree = "<group>"; };
+		CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSubwaysArray.swift; sourceTree = "<group>"; };
+		CDA5D9E622A837EC002694E9 /* BuildingMinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMinPrice.swift; sourceTree = "<group>"; };
 		CDFE847C22A689180016A5A8 /* TrendCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFE847F22A689180016A5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDFE848622A689190016A5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,9 +187,14 @@
 				CDFE84B722A6A7DB0016A5A8 /* Api */,
 				CDFE84BE22A6A9F70016A5A8 /* Provider */,
 				CDFE84CD22A6E5360016A5A8 /* SearchDataResult.swift */,
+				CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */,
 				CDFE84CF22A6E5A70016A5A8 /* DataResult.swift */,
-				CDFE84D122A6E63F0016A5A8 /* BuildingResult.swift */,
 				CDFE84D322A6E9F40016A5A8 /* BuildingRegion.swift */,
+				CDA5D9DE22A7FBB5002694E9 /* BuildingSubways.swift */,
+				CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */,
+				CDA5D9E622A837EC002694E9 /* BuildingMinPrice.swift */,
+				CDFE84D122A6E63F0016A5A8 /* BuildingResult.swift */,
+				CDA5D9DC22A7E18F002694E9 /* BuildingResultProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,17 +375,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA5D9E322A80BD8002694E9 /* BuildingSubwaysArray.swift in Sources */,
 				CDFE84D022A6E5A70016A5A8 /* DataResult.swift in Sources */,
+				CDA5D9E722A837EC002694E9 /* BuildingMinPrice.swift in Sources */,
 				CDFE84B522A6A71A0016A5A8 /* SearchListViewController.swift in Sources */,
 				CDFE84BD22A6A99A0016A5A8 /* SearchListPresenterProtocol.swift in Sources */,
 				CDFE84C022A6AA090016A5A8 /* SearchListDataProviderProtocol.swift in Sources */,
 				CDFE84C222A6AA1F0016A5A8 /* SearchListDataProvider.swift in Sources */,
 				CDFE84D422A6E9F40016A5A8 /* BuildingRegion.swift in Sources */,
+				CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */,
 				CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */,
 				CDFE84C822A6B21E0016A5A8 /* CommentCell.swift in Sources */,
 				CDFE84BB22A6A9870016A5A8 /* SearchListPresenter.swift in Sources */,
+				CDA5D9DD22A7E18F002694E9 /* BuildingResultProtocol.swift in Sources */,
 				CDFE84CE22A6E5360016A5A8 /* SearchDataResult.swift in Sources */,
 				CDFE84C422A6AA830016A5A8 /* SearchListViewProtocol.swift in Sources */,
+				CDA5D9DF22A7FBB5002694E9 /* BuildingSubways.swift in Sources */,
 				CDFE84D222A6E63F0016A5A8 /* BuildingResult.swift in Sources */,
 				CDFE84CC22A6C7900016A5A8 /* ApiServies.swift in Sources */,
 				CDFE84B922A6A7EC0016A5A8 /* ViewControllersFactory.swift in Sources */,
