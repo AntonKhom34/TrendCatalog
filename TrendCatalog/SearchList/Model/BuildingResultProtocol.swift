@@ -12,8 +12,8 @@ protocol BuildingResultProtocol {
     var image: URL { get }
     var region: BuildingRegion { get }
     var name: String { get }
-//    var deadline: String? { get }
+//    var deadline: String { get }
     var subways: [BuildingSubways] { get }
-    var min_prices: [BuildingMinPrice]? { get }
+    var min_prices: [BuildingMinPrice] { get }
     var builder: BuildingBuilder { get }
 }

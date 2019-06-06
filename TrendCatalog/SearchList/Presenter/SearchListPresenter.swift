@@ -9,7 +9,7 @@
 import Foundation
 
 class SearchListPresenter: SearchListPresenterProtocol {
-    static let visibleBuildings: Int = 20
+    static let visibleBuildings: Int = 30
     
     private var buildings = ApiServies()
     

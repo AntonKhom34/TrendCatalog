@@ -25,62 +25,46 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var regionNameLabel: UILabel!
     @IBOutlet weak var rootImage: UIImageView!
 
-    func setRegionName(_ name: String) {
+    // MARK: - Public
+    
+    func setInfoAboutBuildingComplex(name: String,
+                                     developer: String,
+                                     complexName: String,
+                                     subwaysName: String,
+                                     subwaysDistanceTiming: Int,
+                                     subwaysDistanceType: String,
+                                     imageName: URL) {
         regionNameLabel.text = name
-    }
-    
-    func setDeveloper(_ developer: String) {
         developerLabel.text = developer
-    }
-    
-    func setDeadline(_ deadline: String) {
-        deadlineLabel.text = deadline
-    }
-    
-    func setName(_ name: String) {
-        сomplexNameLabel.text = "ЖК: \(name)"
-    }
-    
-    func setSubway(_ subwayName: String) {
-        subwaysLabel.text = subwayName
-    }
-    
-    func setImage(imageName: URL) {
+        сomplexNameLabel.text = "ЖК: \(complexName)"
+        subwaysLabel.text = "\(subwaysName) \(subwaysDistanceTiming) мин. \(subwaysDistanceType)"
         
         if let data = try? Data(contentsOf: imageName) {
             rootImage.image = UIImage(data: data)
         }
     }
     
-    func setNullApartment(nullApartment: String)  {
+    func setNullApartment(nullApartment: String,
+                          nullApartmentCost: Int)  {
         nullRoomApartmentLabel.text = nullApartment
-    }
-    
-    func setFirstRoomApartment(firstRoomApartment: String)  {
-        firstRoomApartmentLabel.text = firstRoomApartment
-    }
-    
-    func setSecondRoomApartment(secondRoomApartment: String)  {
-        secondRoomApartmentLabel.text = secondRoomApartment
-    }
-    
-    func setThirdRoomApartment(thirdRoomApartment: String)  {
-        thirdRoomApartmentLabel.text = thirdRoomApartment
-    }
-    
-    func setNullApartmentCost(nullApartmentCost: Int)  {
         nullRoomApartmentCostLabel.text = String(nullApartmentCost)
     }
     
-    func setFirstRoomApartmentCost(firstRoomApartmentCost: Int)  {
+    func setFirstRoomApartment(firstRoomApartment: String,
+                               firstRoomApartmentCost: Int)  {
+        firstRoomApartmentLabel.text = firstRoomApartment
         firstRoomApartmentCostLabel.text = String(firstRoomApartmentCost)
     }
     
-    func setSecondRoomApartmentCost(secondRoomApartmentCost: Int)  {
+    func setSecondRoomApartment(secondRoomApartment: String,
+                                secondRoomApartmentCost: Int)  {
+        secondRoomApartmentLabel.text = secondRoomApartment
         secondRoomApartmentCostLabel.text = String(secondRoomApartmentCost)
     }
     
-    func setThirdRoomApartmentCost(thirdRoomApartmentCost: Int)  {
+    func setThirdRoomApartment(thirdRoomApartment: String,
+                               thirdRoomApartmentCost: Int)  {
+        thirdRoomApartmentLabel.text = thirdRoomApartment
         thirdRoomApartmentCostLabel.text = String(thirdRoomApartmentCost)
     }
     

@@ -47,36 +47,46 @@ extension SearchListViewController: UITableViewDataSource {
         }
         
         if let building = presenter?.getBuildingItem(atIndex: indexPath.row) {
-            commentCell.setRegionName(building.region.name)
-//            commentCell.setDeadline(building.deadline ?? "Не известно")
-            commentCell.setName(building.name)
-            commentCell.setDeveloper(building.builder.name)
-            commentCell.setSubway("\(building.subways[0].name) \(building.subways[0].distance_timing) мин.")
-            commentCell.setImage(imageName: building.image)
             
-            commentCell.setNullApartment(nullApartment:
-                building.min_prices?[0].rooms ?? "None")
+//            commentCell.setDeadline(building.deadline)
             
-            commentCell.setFirstRoomApartment(firstRoomApartment:
-                building.min_prices?[1].rooms ?? "None")
+            commentCell.setInfoAboutBuildingComplex(name: building.region.name,
+                                                    developer: building.builder.name,
+                                                    complexName: building.name,
+                                                    subwaysName: building.subways[0].name,
+                                                    subwaysDistanceTiming: building.subways[0].distance_timing,
+                                                    subwaysDistanceType: building.subways[0].distance_type,
+                                                    imageName: building.image)
             
-            commentCell.setSecondRoomApartment(secondRoomApartment:
-                building.min_prices?[2].rooms ?? "None")
+            commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                         nullApartmentCost: building.min_prices[0].price)
             
-//            commentCell.setThirdRoomApartment(thirdRoomApartment:
-//                building.min_prices?[3].rooms ?? "None")
-            
-            commentCell.setNullApartmentCost(nullApartmentCost:
-                building.min_prices?[0].price ?? 0)
-            
-            commentCell.setFirstRoomApartmentCost(firstRoomApartmentCost:
-                building.min_prices?[1].price ?? 0)
-            
-            commentCell.setSecondRoomApartmentCost(secondRoomApartmentCost:
-                building.min_prices?[2].price ?? 0)
-            
-//            commentCell.setThirdRoomApartmentCost(thirdRoomApartmentCost:
-//                building.min_prices?[3].price ?? 0)
+            switch building.min_prices.count {
+            case 1:
+                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                             nullApartmentCost: building.min_prices[0].price)
+            case 2:
+                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                             nullApartmentCost: building.min_prices[0].price)
+                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                                  firstRoomApartmentCost: building.min_prices[1].price)
+            case 3:
+                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                             nullApartmentCost: building.min_prices[0].price)
+                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                                  firstRoomApartmentCost: building.min_prices[1].price)
+                commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
+                                                   secondRoomApartmentCost: building.min_prices[2].price)
+            default:
+                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                             nullApartmentCost: building.min_prices[0].price)
+                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                                  firstRoomApartmentCost: building.min_prices[1].price)
+                commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
+                                                   secondRoomApartmentCost: building.min_prices[2].price)
+                commentCell.setThirdRoomApartment(thirdRoomApartment: building.min_prices[3].rooms,
+                                                  thirdRoomApartmentCost: building.min_prices[3].price)
+            }
         }
         
         return cell
