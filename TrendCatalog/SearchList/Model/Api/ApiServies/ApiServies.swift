@@ -9,14 +9,16 @@
 import Foundation
 
 class ApiServies {
-    private var buildings: [BuildingResult] = []
+    private let apiUrl = "http://api.trend-dev.ru/v3_1"
+}
+
+extension ApiServies: ApiServiesProtocol {
     
-// MARK: - Private
-    
-    func getBuildings(count: Int, onComplete: @escaping ([BuildingResult]) -> Void) {
-        
-        guard let url = URL(string: "http://api.trend-dev.ru/v3_1/blocks/search?show_type=list&count=\(count)&offset=1")
-            else { return }
+    func getBuildings(offset: Int, count: Int, sortType: String, onComplete: @escaping ([BuildingResult]) -> Void) {
+        let urlString = "\(apiUrl)/blocks/search?show_type=list&count=\(count)&offset=\(offset)&sort=\(sortType)"
+        guard let url = URL(string: urlString) else {
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let _ = error {
@@ -46,17 +48,4 @@ class ApiServies {
         }
         task.resume()
     }
-    
-// MARK: - Public
-    
-    internal func getModelBuildings(count: Int) -> [BuildingResult] {
-        getBuildings(count: count) { [weak self] buildings in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.buildings = buildings
-        }
-        return buildings
-    }
-    
 }

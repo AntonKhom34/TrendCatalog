@@ -12,10 +12,9 @@ class ViewControllersFactory {
     
     static func makeSearchListViewController() -> UIViewController {
         
-        let view: SearchListViewController = SearchListViewController()
-        let dataProvider: SearchListDataProviderProtocol = SearchListDataProvider()
+        let view = SearchListViewController()
         let presenter = SearchListPresenter(view: view,
-                                         searchListDataProvider: dataProvider)
+                                            provider: SearchListDataProvider(service: ApiServies()))
         view.presenter = presenter
         
         return view

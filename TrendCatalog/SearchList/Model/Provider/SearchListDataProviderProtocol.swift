@@ -9,4 +9,6 @@
 import Foundation
 
 protocol SearchListDataProviderProtocol {
+    
+    func getBuildings(offset: Int, count: Int, sortType: String, onComplete: @escaping ([BuildingResult]) -> ())
 }

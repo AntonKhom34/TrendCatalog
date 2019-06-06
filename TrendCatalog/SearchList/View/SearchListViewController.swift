@@ -10,18 +10,17 @@ import UIKit
 
 class SearchListViewController: UIViewController {
     
+    private static let commentCellId = "commentCell"
+
+    // MARK: - Outlets
+    
     @IBOutlet weak var loadTen: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func reloadTab(_ sender: Any) {
-        presenter.getModel()
-        reloadTable()
-    }
-    
-    fileprivate static let commentCellId = "commentCell"
+    // MARK: - Properties
     
     var presenter: SearchListPresenterProtocol!
     
-    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +28,34 @@ class SearchListViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
                            forCellReuseIdentifier: SearchListViewController.commentCellId)
-        presenter.getModel()
         tableView.separatorColor = UIColor.clear
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        presenter.onViewWillAppear()
+    }
+    
+    // MARK: - Events
+    
+    @IBAction func reloadTab(_ sender: Any) {
+        presenter.onLoadTenButtonTapped()
+    }
+    @IBAction func showMinPriceViewController(_ sender: Any) {
+        //        let viewController = ViewControllersFactory.makeMinPriceViewController()
+        //        navigationController?.pushViewController(viewController, animated: true)
+    }
+    @IBAction func tapedSortedPrice(_ sender: Any) {
+        presenter.onSortChangedWithType(.price)
+    }
+    @IBAction func tapedSortedRegion(_ sender: Any) {
+        presenter.onSortChangedWithType(.region)
+    }
+    @IBAction func tapedSortedSubways(_ sender: Any) {
+        presenter.onSortChangedWithType(.subway)
+    }
+    
     
     // MARK: - Private
     
@@ -53,48 +77,43 @@ extension SearchListViewController: UITableViewDataSource {
         guard let commentCell = cell as? CommentCell else {
             return UITableViewCell(frame: .zero)
         }
+
+        let building = presenter.getBuildingItem(atIndex: indexPath.row)
+        //            commentCell.setDeadline(building.deadline)
         
-        if let building = presenter?.getBuildingItem(atIndex: indexPath.row) {
-            
-//            commentCell.setDeadline(building.deadline)
-            
-            commentCell.setInfoAboutBuildingComplex(name: building.region.name,
-                                                    developer: building.builder.name,
-                                                    complexName: building.name,
-                                                    subwaysName: building.subways[0].name,
-                                                    subwaysDistanceTiming: building.subways[0].distance_timing,
-                                                    subwaysDistanceType: building.subways[0].distance_type,
-                                                    imageName: building.image)
-            
+        commentCell.setInfoAboutBuildingComplex(name: building.region.name,
+                                                developer: building.builder.name,
+                                                complexName: building.name,
+                                                subwaysName: building.subways[0].name,
+                                                subwaysDistanceTiming: building.subways[0].distance_timing,
+                                                subwaysDistanceType: building.subways[0].distance_type,
+                                                imageName: building.image)
+        
+        switch building.min_prices.count {
+        case 1:
             commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
                                          nullApartmentCost: building.min_prices[0].price)
-            
-            switch building.min_prices.count {
-            case 1:
-                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
-                                             nullApartmentCost: building.min_prices[0].price)
-            case 2:
-                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
-                                             nullApartmentCost: building.min_prices[0].price)
-                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
-                                                  firstRoomApartmentCost: building.min_prices[1].price)
-            case 3:
-                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
-                                             nullApartmentCost: building.min_prices[0].price)
-                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
-                                                  firstRoomApartmentCost: building.min_prices[1].price)
-                commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
-                                                   secondRoomApartmentCost: building.min_prices[2].price)
-            default:
-                commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
-                                             nullApartmentCost: building.min_prices[0].price)
-                commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
-                                                  firstRoomApartmentCost: building.min_prices[1].price)
-                commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
-                                                   secondRoomApartmentCost: building.min_prices[2].price)
-                commentCell.setThirdRoomApartment(thirdRoomApartment: building.min_prices[3].rooms,
-                                                  thirdRoomApartmentCost: building.min_prices[3].price)
-            }
+        case 2:
+            commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                         nullApartmentCost: building.min_prices[0].price)
+            commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                              firstRoomApartmentCost: building.min_prices[1].price)
+        case 3:
+            commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                         nullApartmentCost: building.min_prices[0].price)
+            commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                              firstRoomApartmentCost: building.min_prices[1].price)
+            commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
+                                               secondRoomApartmentCost: building.min_prices[2].price)
+        default:
+            commentCell.setNullApartment(nullApartment: building.min_prices[0].rooms,
+                                         nullApartmentCost: building.min_prices[0].price)
+            commentCell.setFirstRoomApartment(firstRoomApartment: building.min_prices[1].rooms,
+                                              firstRoomApartmentCost: building.min_prices[1].price)
+            commentCell.setSecondRoomApartment(secondRoomApartment: building.min_prices[2].rooms,
+                                               secondRoomApartmentCost: building.min_prices[2].price)
+            commentCell.setThirdRoomApartment(thirdRoomApartment: building.min_prices[3].rooms,
+                                              thirdRoomApartmentCost: building.min_prices[3].price)
         }
         
         return cell

@@ -9,7 +9,12 @@
 import Foundation
 
 protocol SearchListPresenterProtocol {
-    func getBuildingItem(atIndex: Int) -> BuildingResultProtocol?
+    
+    // MARK: - Signals from View
+    
+    func getBuildingItem(atIndex: Int) -> BuildingResultProtocol
     func getBuildingItemsCount() -> Int
-    func getModel()
+    func onViewWillAppear()
+    func onLoadTenButtonTapped()
+    func onSortChangedWithType(_ type: SortType)
 }

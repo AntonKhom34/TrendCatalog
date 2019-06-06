@@ -12,6 +12,7 @@
 		CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */; };
 		CDA5D9E322A80BD8002694E9 /* BuildingSubwaysArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */; };
 		CDA5D9E722A837EC002694E9 /* BuildingMinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E622A837EC002694E9 /* BuildingMinPrice.swift */; };
+		CDABD4E422A973B000C16E12 /* ApiServiesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABD4E322A973B000C16E12 /* ApiServiesProtocol.swift */; };
 		CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE847F22A689180016A5A8 /* AppDelegate.swift */; };
 		CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848622A689190016A5A8 /* Assets.xcassets */; };
 		CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 		CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingBuilder.swift; sourceTree = "<group>"; };
 		CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSubwaysArray.swift; sourceTree = "<group>"; };
 		CDA5D9E622A837EC002694E9 /* BuildingMinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMinPrice.swift; sourceTree = "<group>"; };
+		CDABD4E322A973B000C16E12 /* ApiServiesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiesProtocol.swift; sourceTree = "<group>"; };
 		CDFE847C22A689180016A5A8 /* TrendCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFE847F22A689180016A5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDFE848622A689190016A5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				CDFE84CB22A6C7900016A5A8 /* ApiServies.swift */,
+				CDABD4E322A973B000C16E12 /* ApiServiesProtocol.swift */,
 			);
 			path = ApiServies;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				CDFE84B522A6A71A0016A5A8 /* SearchListViewController.swift in Sources */,
 				CDFE84BD22A6A99A0016A5A8 /* SearchListPresenterProtocol.swift in Sources */,
 				CDFE84C022A6AA090016A5A8 /* SearchListDataProviderProtocol.swift in Sources */,
+				CDABD4E422A973B000C16E12 /* ApiServiesProtocol.swift in Sources */,
 				CDFE84C222A6AA1F0016A5A8 /* SearchListDataProvider.swift in Sources */,
 				CDFE84D422A6E9F40016A5A8 /* BuildingRegion.swift in Sources */,
 				CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */,

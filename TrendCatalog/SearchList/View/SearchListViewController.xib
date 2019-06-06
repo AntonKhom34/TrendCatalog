@@ -34,6 +34,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKz-Uc-egt">
+                                    <rect key="frame" x="27" y="15" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="showMinPriceViewController:" destination="-1" eventType="touchUpInside" id="EYm-j2-XyY"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.74183737982988562" green="0.20912994965717768" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -42,29 +50,87 @@
                                 <constraint firstItem="D2a-1P-P1z" firstAttribute="centerX" secondItem="LTC-wD-QRk" secondAttribute="centerX" id="lAn-na-9YY"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TG6-yT-m9g">
+                            <rect key="frame" x="0.0" y="60" width="414" height="33"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s76-Mf-NdK">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="33"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="по цене">
+                                        <color key="titleColor" red="0.094117647060000004" green="0.1764705882" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapedSortedPrice:" destination="-1" eventType="touchUpInside" id="8bv-Xb-Qg8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbi-Lw-AFK">
+                                    <rect key="frame" x="138" y="0.0" width="138" height="33"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="по району">
+                                        <color key="titleColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapedSortedRegion:" destination="-1" eventType="touchUpInside" id="NRs-Pn-nEj"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAx-2e-UVW">
+                                    <rect key="frame" x="276" y="0.0" width="138" height="33"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="по метро">
+                                        <color key="titleColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapedSortedSubways:" destination="-1" eventType="touchUpInside" id="09k-oj-F7Y"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="s76-Mf-NdK" firstAttribute="leading" secondItem="TG6-yT-m9g" secondAttribute="leading" id="1ce-13-xAq"/>
+                                <constraint firstAttribute="bottom" secondItem="s76-Mf-NdK" secondAttribute="bottom" id="ENu-y4-DA9"/>
+                                <constraint firstItem="Qbi-Lw-AFK" firstAttribute="centerX" secondItem="TG6-yT-m9g" secondAttribute="centerX" id="FXK-cF-rh7"/>
+                                <constraint firstAttribute="bottom" secondItem="Qbi-Lw-AFK" secondAttribute="bottom" id="HFh-S4-dTl"/>
+                                <constraint firstAttribute="bottom" secondItem="MAx-2e-UVW" secondAttribute="bottom" id="JLq-F9-fcn"/>
+                                <constraint firstItem="s76-Mf-NdK" firstAttribute="trailing" secondItem="Qbi-Lw-AFK" secondAttribute="leading" id="KBD-er-nzk"/>
+                                <constraint firstItem="Qbi-Lw-AFK" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="top" id="QGB-nZ-TQX"/>
+                                <constraint firstAttribute="trailing" secondItem="MAx-2e-UVW" secondAttribute="trailing" id="S78-sg-KcY"/>
+                                <constraint firstItem="s76-Mf-NdK" firstAttribute="width" secondItem="Qbi-Lw-AFK" secondAttribute="width" id="TLA-hm-AGM"/>
+                                <constraint firstItem="s76-Mf-NdK" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="top" id="WPo-lK-bh7"/>
+                                <constraint firstItem="Qbi-Lw-AFK" firstAttribute="width" secondItem="MAx-2e-UVW" secondAttribute="width" id="cVE-gh-kKv"/>
+                                <constraint firstItem="MAx-2e-UVW" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="top" id="xrc-vq-Gar"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Re-O0N">
-                            <rect key="frame" x="0.0" y="60" width="414" height="30"/>
-                            <state key="normal" title="Загрузить 10"/>
+                            <rect key="frame" x="0.0" y="93" width="414" height="30"/>
+                            <state key="normal" title="Загрузить 10">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                             <connections>
                                 <action selector="reloadTab:" destination="-1" eventType="touchUpInside" id="Yka-LT-FeI"/>
                             </connections>
                         </button>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-f8-8DO">
-                            <rect key="frame" x="0.0" y="90" width="414" height="728"/>
+                            <rect key="frame" x="0.0" y="123" width="414" height="695"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="H6N-Re-O0N" secondAttribute="trailing" id="5vQ-e7-odX"/>
+                        <constraint firstItem="TG6-yT-m9g" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="BF9-4K-Tjo"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="top" secondItem="H6N-Re-O0N" secondAttribute="bottom" id="EkH-Sj-Vcf"/>
                         <constraint firstItem="H6N-Re-O0N" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="Ina-wI-FTF"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="LTC-wD-QRk" secondAttribute="bottom" id="K0v-2E-Oo3"/>
+                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="bottom" id="K0v-2E-Oo3"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="RLA-UQ-qmR"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="ZwM-wA-EoN"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="top" secondItem="bGA-Me-NWQ" secondAttribute="top" id="e0p-hq-uDT"/>
                         <constraint firstAttribute="trailing" secondItem="LTC-wD-QRk" secondAttribute="trailing" id="gKX-1x-jyL"/>
                         <constraint firstAttribute="bottom" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="kUq-og-NNF"/>
+                        <constraint firstItem="TG6-yT-m9g" firstAttribute="top" secondItem="LTC-wD-QRk" secondAttribute="bottom" id="pBK-Wy-DtV"/>
+                        <constraint firstAttribute="trailing" secondItem="TG6-yT-m9g" secondAttribute="trailing" id="vHQ-ip-LuA"/>
                         <constraint firstAttribute="trailing" secondItem="U1c-f8-8DO" secondAttribute="trailing" id="zTw-sx-u3u"/>
                     </constraints>
                 </view>

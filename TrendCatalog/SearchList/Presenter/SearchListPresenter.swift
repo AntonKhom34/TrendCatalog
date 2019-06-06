@@ -8,43 +8,86 @@
 
 import Foundation
 
-class SearchListPresenter: SearchListPresenterProtocol {
-    static var visibleBuildings: Int = 10
-    
-    private var buildings = ApiServies()
-    
-    fileprivate var buildingResult: [BuildingResult]
+enum SortType: String {
+    case price
+    case region
+    case subway
+
+    var key: String {
+        return self.rawValue
+    }
+}
+
+class SearchListPresenter {
+    private let packBuildingsCount = 10
+    private let startBuildingsCount = 10
+
+    private var buildings: [BuildingResult]
+    private var provider: SearchListDataProviderProtocol
+    private var sortType: SortType
     
     unowned var view: SearchListViewProtocol
     
-    private var searchListDataProvider: SearchListDataProviderProtocol
     
     init(view: SearchListViewProtocol,
-         searchListDataProvider: SearchListDataProviderProtocol) {
+         provider: SearchListDataProviderProtocol) {
         
         self.view = view
-        self.searchListDataProvider = searchListDataProvider
-        self.buildingResult = []
+        self.provider = provider
+        buildings = []
+        sortType = .price
     }
     
 // MARK: - Public
     
+}
+
+// MARK: - SearchListPresenterProtocol
+
+extension SearchListPresenter: SearchListPresenterProtocol  {
+
     func getBuildingItemsCount() -> Int {
-        return buildingResult.count
+        return buildings.count
     }
-    
-    func getBuildingItem(atIndex: Int) -> BuildingResultProtocol? {
-        
-        if 0 <= atIndex && atIndex < buildingResult.count {
-            return buildingResult[atIndex]
+
+    func getBuildingItem(atIndex: Int) -> BuildingResultProtocol {
+        guard atIndex >= 0, atIndex < buildings.count else {
+            fatalError("Could not get building with index: \(atIndex)")
         }
-        
-        return nil
+
+        return buildings[atIndex]
+    }
+
+    func onViewWillAppear() {
+        initStartBuildings()
     }
     
-    func getModel() {
-        self.buildingResult = self.buildings.getModelBuildings(count: SearchListPresenter.visibleBuildings)
-        SearchListPresenter.visibleBuildings = SearchListPresenter.visibleBuildings + 10
+    func onLoadTenButtonTapped() {
+        provider.getBuildings(offset: buildings.count,
+                              count: packBuildingsCount,
+                              sortType: sortType.key) { [weak self] buildings in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.buildings.append(contentsOf: buildings)
+            strongSelf.view.reloadTable()
+        }
     }
-    
+
+    func onSortChangedWithType(_ type: SortType) {
+        sortType = type
+        initStartBuildings()
+    }
+
+    // MARK: - Private
+
+    private func initStartBuildings() {
+        provider.getBuildings(offset: 0, count: startBuildingsCount, sortType: sortType.key) { [weak self] buildings in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.buildings = buildings
+            strongSelf.view.reloadTable()
+        }
+    }
 }

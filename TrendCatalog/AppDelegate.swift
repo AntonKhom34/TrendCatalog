@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         let rootViewController = ViewControllersFactory.makeSearchListViewController()
+        let navigationVontroller = UINavigationController(rootViewController: rootViewController)
         
-        window.rootViewController = rootViewController
+        window.rootViewController = navigationVontroller
         window.makeKeyAndVisible()
         
         return true

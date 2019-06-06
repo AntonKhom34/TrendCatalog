@@ -47,25 +47,25 @@ class CommentCell: UITableViewCell {
     func setNullApartment(nullApartment: String,
                           nullApartmentCost: Int)  {
         nullRoomApartmentLabel.text = nullApartment
-        nullRoomApartmentCostLabel.text = String(nullApartmentCost)
+        nullRoomApartmentCostLabel.text = "от \(nullApartmentCost) руб."
     }
     
     func setFirstRoomApartment(firstRoomApartment: String,
                                firstRoomApartmentCost: Int)  {
         firstRoomApartmentLabel.text = firstRoomApartment
-        firstRoomApartmentCostLabel.text = String(firstRoomApartmentCost)
+        firstRoomApartmentCostLabel.text = "от \(firstRoomApartmentCost) руб."
     }
     
     func setSecondRoomApartment(secondRoomApartment: String,
                                 secondRoomApartmentCost: Int)  {
         secondRoomApartmentLabel.text = secondRoomApartment
-        secondRoomApartmentCostLabel.text = String(secondRoomApartmentCost)
+        secondRoomApartmentCostLabel.text = "от \(secondRoomApartmentCost) руб."
     }
     
     func setThirdRoomApartment(thirdRoomApartment: String,
                                thirdRoomApartmentCost: Int)  {
         thirdRoomApartmentLabel.text = thirdRoomApartment
-        thirdRoomApartmentCostLabel.text = String(thirdRoomApartmentCost)
+        thirdRoomApartmentCostLabel.text = "от \(thirdRoomApartmentCost) руб."
     }
     
 }
