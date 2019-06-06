@@ -9,7 +9,7 @@
 import Foundation
 
 class SearchListPresenter: SearchListPresenterProtocol {
-    static let visibleBuildings: Int = 30
+    static var visibleBuildings: Int = 10
     
     private var buildings = ApiServies()
     
@@ -27,8 +27,9 @@ class SearchListPresenter: SearchListPresenterProtocol {
         self.buildingResult = []
     }
     
+// MARK: - Public
+    
     func getBuildingItemsCount() -> Int {
-        self.buildingResult = self.buildings.getModelBuildings(count: SearchListPresenter.visibleBuildings)
         return buildingResult.count
     }
     
@@ -40,4 +41,10 @@ class SearchListPresenter: SearchListPresenterProtocol {
         
         return nil
     }
+    
+    func getModel() {
+        self.buildingResult = self.buildings.getModelBuildings(count: SearchListPresenter.visibleBuildings)
+        SearchListPresenter.visibleBuildings = SearchListPresenter.visibleBuildings + 10
+    }
+    
 }

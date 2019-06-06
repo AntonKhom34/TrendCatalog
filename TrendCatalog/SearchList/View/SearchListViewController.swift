@@ -8,9 +8,13 @@
 
 import UIKit
 
-class SearchListViewController: UIViewController {    
+class SearchListViewController: UIViewController {
+    
+    @IBOutlet weak var loadTen: UIButton!
+    
     @IBAction func reloadTab(_ sender: Any) {
-        tableView.reloadData()
+        presenter.getModel()
+        reloadTable()
     }
     
     fileprivate static let commentCellId = "commentCell"
@@ -25,7 +29,11 @@ class SearchListViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
                            forCellReuseIdentifier: SearchListViewController.commentCellId)
+        presenter.getModel()
+        tableView.separatorColor = UIColor.clear
     }
+    
+    // MARK: - Private
     
     func reloadTable() {
         tableView.reloadData()

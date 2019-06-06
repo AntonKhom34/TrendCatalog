@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchListViewController" customModule="TrendCatalog" customModuleProvider="target">
             <connections>
+                <outlet property="loadTen" destination="H6N-Re-O0N" id="Zmp-Jd-8PA"/>
                 <outlet property="tableView" destination="U1c-f8-8DO" id="xVS-Hg-dMg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,14 +27,24 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTC-wD-QRk">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТРЕНД" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2a-1P-P1z">
+                                    <rect key="frame" x="166.5" y="15" width="81.5" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" red="0.74183737982988562" green="0.20912994965717768" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="D2a-1P-P1z" firstAttribute="centerY" secondItem="LTC-wD-QRk" secondAttribute="centerY" id="7p0-Nx-qyb"/>
                                 <constraint firstAttribute="height" constant="60" id="frI-bi-Iag"/>
+                                <constraint firstItem="D2a-1P-P1z" firstAttribute="centerX" secondItem="LTC-wD-QRk" secondAttribute="centerX" id="lAn-na-9YY"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Re-O0N">
                             <rect key="frame" x="0.0" y="60" width="414" height="30"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Загрузить 10"/>
                             <connections>
                                 <action selector="reloadTab:" destination="-1" eventType="touchUpInside" id="Yka-LT-FeI"/>
                             </connections>
