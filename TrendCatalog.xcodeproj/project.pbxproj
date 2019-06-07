@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD7C908122AA34090048B214 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C907F22AA34080048B214 /* CommentCell.xib */; };
+		CD7C908222AA34090048B214 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C908022AA34080048B214 /* CommentCell.swift */; };
+		CD7C908422AA406F0048B214 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C908322AA406F0048B214 /* ExtensionInt.swift */; };
 		CDA5D9DD22A7E18F002694E9 /* BuildingResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9DC22A7E18F002694E9 /* BuildingResultProtocol.swift */; };
 		CDA5D9DF22A7FBB5002694E9 /* BuildingSubways.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9DE22A7FBB5002694E9 /* BuildingSubways.swift */; };
 		CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */; };
@@ -26,8 +29,6 @@
 		CDFE84C022A6AA090016A5A8 /* SearchListDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84BF22A6AA090016A5A8 /* SearchListDataProviderProtocol.swift */; };
 		CDFE84C222A6AA1F0016A5A8 /* SearchListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84C122A6AA1F0016A5A8 /* SearchListDataProvider.swift */; };
 		CDFE84C422A6AA830016A5A8 /* SearchListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84C322A6AA830016A5A8 /* SearchListViewProtocol.swift */; };
-		CDFE84C822A6B21E0016A5A8 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84C622A6B21E0016A5A8 /* CommentCell.swift */; };
-		CDFE84C922A6B21E0016A5A8 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFE84C722A6B21E0016A5A8 /* CommentCell.xib */; };
 		CDFE84CC22A6C7900016A5A8 /* ApiServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84CB22A6C7900016A5A8 /* ApiServies.swift */; };
 		CDFE84CE22A6E5360016A5A8 /* SearchDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84CD22A6E5360016A5A8 /* SearchDataResult.swift */; };
 		CDFE84D022A6E5A70016A5A8 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE84CF22A6E5A70016A5A8 /* DataResult.swift */; };
@@ -53,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD7C907F22AA34080048B214 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		CD7C908022AA34080048B214 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CD7C908322AA406F0048B214 /* ExtensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
 		CDA5D9DC22A7E18F002694E9 /* BuildingResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingResultProtocol.swift; sourceTree = "<group>"; };
 		CDA5D9DE22A7FBB5002694E9 /* BuildingSubways.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSubways.swift; sourceTree = "<group>"; };
 		CDA5D9E022A7FDED002694E9 /* BuildingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingBuilder.swift; sourceTree = "<group>"; };
@@ -78,8 +82,6 @@
 		CDFE84BF22A6AA090016A5A8 /* SearchListDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListDataProviderProtocol.swift; sourceTree = "<group>"; };
 		CDFE84C122A6AA1F0016A5A8 /* SearchListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListDataProvider.swift; sourceTree = "<group>"; };
 		CDFE84C322A6AA830016A5A8 /* SearchListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewProtocol.swift; sourceTree = "<group>"; };
-		CDFE84C622A6B21E0016A5A8 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		CDFE84C722A6B21E0016A5A8 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CDFE84CB22A6C7900016A5A8 /* ApiServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServies.swift; sourceTree = "<group>"; };
 		CDFE84CD22A6E5360016A5A8 /* SearchDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataResult.swift; sourceTree = "<group>"; };
 		CDFE84CF22A6E5A70016A5A8 /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
@@ -112,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD7C907E22AA34080048B214 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C907F22AA34080048B214 /* CommentCell.xib */,
+				CD7C908022AA34080048B214 /* CommentCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CDFE847322A689180016A5A8 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +148,8 @@
 			children = (
 				CDFE84AF22A6A61F0016A5A8 /* SearchList */,
 				CDFE847F22A689180016A5A8 /* AppDelegate.swift */,
+				CDFE84B822A6A7EC0016A5A8 /* ViewControllersFactory.swift */,
+				CD7C908322AA406F0048B214 /* ExtensionInt.swift */,
 				CDFE848622A689190016A5A8 /* Assets.xcassets */,
 				CDFE848822A689190016A5A8 /* LaunchScreen.storyboard */,
 				CDFE848B22A689190016A5A8 /* Info.plist */,
@@ -175,7 +188,7 @@
 		CDFE84B022A6A6480016A5A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDFE84C522A6B1ED0016A5A8 /* Cell */,
+				CD7C907E22AA34080048B214 /* Cell */,
 				CDFE84B322A6A71A0016A5A8 /* SearchListViewController.swift */,
 				CDFE84B422A6A71A0016A5A8 /* SearchListViewController.xib */,
 				CDFE84C322A6AA830016A5A8 /* SearchListViewProtocol.swift */,
@@ -186,7 +199,7 @@
 		CDFE84B122A6A64A0016A5A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CDFE84B722A6A7DB0016A5A8 /* Api */,
+				CDFE84B722A6A7DB0016A5A8 /* ApiServies */,
 				CDFE84BE22A6A9F70016A5A8 /* Provider */,
 				CDFE84CD22A6E5360016A5A8 /* SearchDataResult.swift */,
 				CDA5D9E222A80BD8002694E9 /* BuildingSubwaysArray.swift */,
@@ -210,13 +223,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		CDFE84B722A6A7DB0016A5A8 /* Api */ = {
+		CDFE84B722A6A7DB0016A5A8 /* ApiServies */ = {
 			isa = PBXGroup;
 			children = (
-				CDFE84CA22A6C7770016A5A8 /* ApiServies */,
-				CDFE84B822A6A7EC0016A5A8 /* ViewControllersFactory.swift */,
+				CDFE84CB22A6C7900016A5A8 /* ApiServies.swift */,
+				CDABD4E322A973B000C16E12 /* ApiServiesProtocol.swift */,
 			);
-			path = Api;
+			path = ApiServies;
 			sourceTree = "<group>";
 		};
 		CDFE84BE22A6A9F70016A5A8 /* Provider */ = {
@@ -226,24 +239,6 @@
 				CDFE84C122A6AA1F0016A5A8 /* SearchListDataProvider.swift */,
 			);
 			path = Provider;
-			sourceTree = "<group>";
-		};
-		CDFE84C522A6B1ED0016A5A8 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CDFE84C622A6B21E0016A5A8 /* CommentCell.swift */,
-				CDFE84C722A6B21E0016A5A8 /* CommentCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		CDFE84CA22A6C7770016A5A8 /* ApiServies */ = {
-			isa = PBXGroup;
-			children = (
-				CDFE84CB22A6C7900016A5A8 /* ApiServies.swift */,
-				CDABD4E322A973B000C16E12 /* ApiServiesProtocol.swift */,
-			);
-			path = ApiServies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +348,7 @@
 				CDFE84B622A6A71A0016A5A8 /* SearchListViewController.xib in Resources */,
 				CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */,
 				CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */,
-				CDFE84C922A6B21E0016A5A8 /* CommentCell.xib in Resources */,
+				CD7C908122AA34090048B214 /* CommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,11 +384,12 @@
 				CDFE84D422A6E9F40016A5A8 /* BuildingRegion.swift in Sources */,
 				CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */,
 				CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */,
-				CDFE84C822A6B21E0016A5A8 /* CommentCell.swift in Sources */,
 				CDFE84BB22A6A9870016A5A8 /* SearchListPresenter.swift in Sources */,
 				CDA5D9DD22A7E18F002694E9 /* BuildingResultProtocol.swift in Sources */,
 				CDFE84CE22A6E5360016A5A8 /* SearchDataResult.swift in Sources */,
+				CD7C908422AA406F0048B214 /* ExtensionInt.swift in Sources */,
 				CDFE84C422A6AA830016A5A8 /* SearchListViewProtocol.swift in Sources */,
+				CD7C908222AA34090048B214 /* CommentCell.swift in Sources */,
 				CDA5D9DF22A7FBB5002694E9 /* BuildingSubways.swift in Sources */,
 				CDFE84D222A6E63F0016A5A8 /* BuildingResult.swift in Sources */,
 				CDFE84CC22A6C7900016A5A8 /* ApiServies.swift in Sources */,

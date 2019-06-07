@@ -34,16 +34,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKz-Uc-egt">
-                                    <rect key="frame" x="27" y="15" width="46" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="showMinPriceViewController:" destination="-1" eventType="touchUpInside" id="EYm-j2-XyY"/>
-                                    </connections>
-                                </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.74183737982988562" green="0.20912994965717768" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.89867829623287676" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="D2a-1P-P1z" firstAttribute="centerY" secondItem="LTC-wD-QRk" secondAttribute="centerY" id="7p0-Nx-qyb"/>
                                 <constraint firstAttribute="height" constant="60" id="frI-bi-Iag"/>
@@ -55,8 +47,8 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s76-Mf-NdK">
                                     <rect key="frame" x="0.0" y="0.0" width="138" height="33"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                     <state key="normal" title="по цене">
                                         <color key="titleColor" red="0.094117647060000004" green="0.1764705882" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -66,8 +58,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbi-Lw-AFK">
                                     <rect key="frame" x="138" y="0.0" width="138" height="33"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                     <state key="normal" title="по району">
                                         <color key="titleColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -77,8 +69,8 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAx-2e-UVW">
                                     <rect key="frame" x="276" y="0.0" width="138" height="33"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                     <state key="normal" title="по метро">
                                         <color key="titleColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -103,39 +95,40 @@
                                 <constraint firstItem="MAx-2e-UVW" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="top" id="xrc-vq-Gar"/>
                             </constraints>
                         </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-f8-8DO">
+                            <rect key="frame" x="0.0" y="93" width="414" height="695"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Re-O0N">
-                            <rect key="frame" x="0.0" y="93" width="414" height="30"/>
-                            <state key="normal" title="Загрузить 10">
+                            <rect key="frame" x="0.0" y="788" width="414" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Загрузить еще 10">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="reloadTab:" destination="-1" eventType="touchUpInside" id="Yka-LT-FeI"/>
                             </connections>
                         </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-f8-8DO">
-                            <rect key="frame" x="0.0" y="123" width="414" height="695"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="H6N-Re-O0N" secondAttribute="trailing" id="5vQ-e7-odX"/>
                         <constraint firstItem="TG6-yT-m9g" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="BF9-4K-Tjo"/>
-                        <constraint firstItem="U1c-f8-8DO" firstAttribute="top" secondItem="H6N-Re-O0N" secondAttribute="bottom" id="EkH-Sj-Vcf"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="Ina-wI-FTF"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="bottom" id="K0v-2E-Oo3"/>
+                        <constraint firstAttribute="trailing" secondItem="H6N-Re-O0N" secondAttribute="trailing" id="OwL-Y3-pDh"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="RLA-UQ-qmR"/>
+                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="ViF-r4-lwm"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="ZwM-wA-EoN"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="top" secondItem="bGA-Me-NWQ" secondAttribute="top" id="e0p-hq-uDT"/>
                         <constraint firstAttribute="trailing" secondItem="LTC-wD-QRk" secondAttribute="trailing" id="gKX-1x-jyL"/>
-                        <constraint firstAttribute="bottom" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="kUq-og-NNF"/>
+                        <constraint firstItem="U1c-f8-8DO" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="bottom" id="hGp-VJ-8bN"/>
+                        <constraint firstItem="H6N-Re-O0N" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="mE4-Sx-n6N"/>
                         <constraint firstItem="TG6-yT-m9g" firstAttribute="top" secondItem="LTC-wD-QRk" secondAttribute="bottom" id="pBK-Wy-DtV"/>
+                        <constraint firstAttribute="bottom" secondItem="H6N-Re-O0N" secondAttribute="bottom" id="v5p-Ho-UTn"/>
                         <constraint firstAttribute="trailing" secondItem="TG6-yT-m9g" secondAttribute="trailing" id="vHQ-ip-LuA"/>
                         <constraint firstAttribute="trailing" secondItem="U1c-f8-8DO" secondAttribute="trailing" id="zTw-sx-u3u"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.89549443493150682" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGA-Me-NWQ" secondAttribute="trailing" id="5Lt-AZ-xXh"/>
                 <constraint firstItem="bGA-Me-NWQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QKa-cv-udR"/>

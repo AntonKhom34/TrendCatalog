@@ -25,10 +25,7 @@ class SearchListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
-                           forCellReuseIdentifier: SearchListViewController.commentCellId)
-        tableView.separatorColor = UIColor.clear
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +55,13 @@ class SearchListViewController: UIViewController {
     
     
     // MARK: - Private
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
+                           forCellReuseIdentifier: SearchListViewController.commentCellId)
+        tableView.separatorColor = UIColor.clear
+    }
     
     func reloadTable() {
         tableView.reloadData()
