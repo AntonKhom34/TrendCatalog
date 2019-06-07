@@ -39,10 +39,6 @@ class SearchListViewController: UIViewController {
     @IBAction func reloadTab(_ sender: Any) {
         presenter.onLoadTenButtonTapped()
     }
-    @IBAction func showMinPriceViewController(_ sender: Any) {
-        //        let viewController = ViewControllersFactory.makeMinPriceViewController()
-        //        navigationController?.pushViewController(viewController, animated: true)
-    }
     @IBAction func tapedSortedPrice(_ sender: Any) {
         presenter.onSortChangedWithType(.price)
     }
