@@ -34,6 +34,7 @@ class SearchListViewController: UIViewController {
     @IBOutlet weak var priceToButton: UIButton!
     @IBOutlet weak var priceFromLabel: UILabel!
     @IBOutlet weak var priceToLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     // MARK: - Properties
     
@@ -49,6 +50,7 @@ class SearchListViewController: UIViewController {
         setupTableView()
         setupPriceListFromAndTo()
         setupLabel()
+        setupLogoImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,6 +117,11 @@ class SearchListViewController: UIViewController {
     func setupLabel() {
         priceFromLabel.text = "Цена от"
         priceToLabel.text = "Цена до"
+    }
+    
+    func setupLogoImage() {
+        logoImageView.image = UIImage(named: "Trend")
+        logoImageView.contentMode = .scaleAspectFill
     }
     
     // MARK: - Public
