@@ -13,5 +13,5 @@ protocol SearchListViewProtocol: class {
     func reloadTable()
     func startPreloader()
     func stopPreloader()
-    func tapedLoadTenButton()
+    func tapedLoadTenButton(priceFrom: String, priceTo: String)
 }

@@ -11,6 +11,11 @@
 		BC02DD5E714695C8F958EA25 /* Pods_TrendCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD25EF66749F0BBA117CBC4C /* Pods_TrendCatalogTests.framework */; };
 		CD16539622AD200D00500710 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16539522AD200D00500710 /* FooterView.xib */; };
 		CD16539822AD208D00500710 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16539722AD208D00500710 /* FooterView.swift */; };
+		CD1653A022AD47E200500710 /* DropdownMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16539E22AD47E200500710 /* DropdownMenuTableViewController.swift */; };
+		CD1653A122AD47E200500710 /* DropdownMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD16539F22AD47E200500710 /* DropdownMenuTableViewController.xib */; };
+		CD1653A322AD484700500710 /* DropdownMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1653A222AD484700500710 /* DropdownMenuPresenter.swift */; };
+		CD1653A522AD485A00500710 /* DropdownMenuPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1653A422AD485A00500710 /* DropdownMenuPresenterProtocol.swift */; };
+		CD1653A722AD4A4700500710 /* DropdownMenuTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1653A622AD4A4700500710 /* DropdownMenuTableViewProtocol.swift */; };
 		CD7C908122AA34090048B214 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7C907F22AA34080048B214 /* CommentCell.xib */; };
 		CD7C908222AA34090048B214 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C908022AA34080048B214 /* CommentCell.swift */; };
 		CD7C908422AA406F0048B214 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C908322AA406F0048B214 /* ExtensionInt.swift */; };
@@ -68,6 +73,11 @@
 		B8AC25CDB201C3E1FF0AB51B /* Pods-TrendCatalogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendCatalogUITests.release.xcconfig"; path = "Target Support Files/Pods-TrendCatalogUITests/Pods-TrendCatalogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CD16539522AD200D00500710 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 		CD16539722AD208D00500710 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		CD16539E22AD47E200500710 /* DropdownMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuTableViewController.swift; sourceTree = "<group>"; };
+		CD16539F22AD47E200500710 /* DropdownMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownMenuTableViewController.xib; sourceTree = "<group>"; };
+		CD1653A222AD484700500710 /* DropdownMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuPresenter.swift; sourceTree = "<group>"; };
+		CD1653A422AD485A00500710 /* DropdownMenuPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuPresenterProtocol.swift; sourceTree = "<group>"; };
+		CD1653A622AD4A4700500710 /* DropdownMenuTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuTableViewProtocol.swift; sourceTree = "<group>"; };
 		CD7C907F22AA34080048B214 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		CD7C908022AA34080048B214 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		CD7C908322AA406F0048B214 /* ExtensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
@@ -152,6 +162,50 @@
 			path = FooterView;
 			sourceTree = "<group>";
 		};
+		CD16539922AD476B00500710 /* DropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CD16539C22AD479A00500710 /* Presenter */,
+				CD16539B22AD479600500710 /* Model */,
+				CD16539A22AD479400500710 /* View */,
+			);
+			path = DropdownMenu;
+			sourceTree = "<group>";
+		};
+		CD16539A22AD479400500710 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD16539D22AD47B000500710 /* New Group */,
+				CD16539E22AD47E200500710 /* DropdownMenuTableViewController.swift */,
+				CD16539F22AD47E200500710 /* DropdownMenuTableViewController.xib */,
+				CD1653A622AD4A4700500710 /* DropdownMenuTableViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD16539B22AD479600500710 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD16539C22AD479A00500710 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CD1653A222AD484700500710 /* DropdownMenuPresenter.swift */,
+				CD1653A422AD485A00500710 /* DropdownMenuPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CD16539D22AD47B000500710 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CD7C907E22AA34080048B214 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +240,7 @@
 		CDFE847E22A689180016A5A8 /* TrendCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				CD16539922AD476B00500710 /* DropdownMenu */,
 				CDFE84AF22A6A61F0016A5A8 /* SearchList */,
 				CDFE847F22A689180016A5A8 /* AppDelegate.swift */,
 				CDFE84B822A6A7EC0016A5A8 /* ViewControllersFactory.swift */,
@@ -406,6 +461,7 @@
 				CDFE84B622A6A71A0016A5A8 /* SearchListViewController.xib in Resources */,
 				CDFE848A22A689190016A5A8 /* LaunchScreen.storyboard in Resources */,
 				CDFE848722A689190016A5A8 /* Assets.xcassets in Resources */,
+				CD1653A122AD47E200500710 /* DropdownMenuTableViewController.xib in Resources */,
 				CD16539622AD200D00500710 /* FooterView.xib in Resources */,
 				CD7C908122AA34090048B214 /* CommentCell.xib in Resources */,
 			);
@@ -531,6 +587,8 @@
 				CDFE84C022A6AA090016A5A8 /* SearchListDataProviderProtocol.swift in Sources */,
 				CDABD4E422A973B000C16E12 /* ApiServiesProtocol.swift in Sources */,
 				CDFE84C222A6AA1F0016A5A8 /* SearchListDataProvider.swift in Sources */,
+				CD1653A322AD484700500710 /* DropdownMenuPresenter.swift in Sources */,
+				CD1653A722AD4A4700500710 /* DropdownMenuTableViewProtocol.swift in Sources */,
 				CDFE84D422A6E9F40016A5A8 /* BuildingRegion.swift in Sources */,
 				CDA5D9E122A7FDED002694E9 /* BuildingBuilder.swift in Sources */,
 				CDFE848022A689180016A5A8 /* AppDelegate.swift in Sources */,
@@ -541,9 +599,11 @@
 				CDFE84C422A6AA830016A5A8 /* SearchListViewProtocol.swift in Sources */,
 				CD7C908222AA34090048B214 /* CommentCell.swift in Sources */,
 				CD16539822AD208D00500710 /* FooterView.swift in Sources */,
+				CD1653A522AD485A00500710 /* DropdownMenuPresenterProtocol.swift in Sources */,
 				CDA5D9DF22A7FBB5002694E9 /* BuildingSubways.swift in Sources */,
 				CDFE84D222A6E63F0016A5A8 /* BuildingResult.swift in Sources */,
 				CDFE84CC22A6C7900016A5A8 /* ApiServies.swift in Sources */,
+				CD1653A022AD47E200500710 /* DropdownMenuTableViewController.swift in Sources */,
 				CDFE84B922A6A7EC0016A5A8 /* ViewControllersFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

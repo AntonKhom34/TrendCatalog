@@ -56,15 +56,16 @@ extension SearchListPresenter: SearchListPresenterProtocol  {
         return buildings[atIndex]
     }
 
-    func onViewWillAppear() {
-        initStartBuildings()
+    func onViewWillAppear(priceFrom: String, priceTo: String) {
+        initStartBuildings(priseFrom: priceFrom, priceTo: priceTo)
     }
     
-    func onLoadTenButtonTapped() {
+    func onLoadTenButtonTapped(priceFrom: String, priceTo: String) {
         view.startPreloader()
         provider.getBuildings(offset: buildings.count,
                               count: packBuildingsCount,
-                              sortType: sortType.key) { [weak self] buildings in
+                              sortType: sortType.key,
+                              priseFrom: priceFrom, priceTo: priceTo) { [weak self] buildings in
             guard let strongSelf = self else {
                 return
             }
@@ -75,16 +76,17 @@ extension SearchListPresenter: SearchListPresenterProtocol  {
         }
     }
 
-    func onSortChangedWithType(_ type: SortType) {
+    func onSortChangedWithType(_ type: SortType, priceFrom: String, priceTo: String) {
         sortType = type
-        initStartBuildings()
+        initStartBuildings(priseFrom: priceFrom, priceTo: priceTo)
     }
 
     // MARK: - Private
 
-    private func initStartBuildings() {
+    private func initStartBuildings(priseFrom: String, priceTo: String) {
         view.startPreloader()
-        provider.getBuildings(offset: 0, count: startBuildingsCount, sortType: sortType.key) { [weak self] buildings in
+        provider.getBuildings(offset: 0, count: startBuildingsCount, sortType: sortType.key,
+                              priseFrom: priseFrom, priceTo: priceTo) { [weak self] buildings in
             guard let strongSelf = self else {
                 return
             }

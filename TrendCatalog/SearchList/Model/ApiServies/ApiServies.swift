@@ -14,8 +14,10 @@ class ApiServies {
 
 extension ApiServies: ApiServiesProtocol {
     
-    func getBuildings(offset: Int, count: Int, sortType: String, onComplete: @escaping ([BuildingResult]) -> Void) {
-        let urlString = "\(apiUrl)/blocks/search?show_type=list&count=\(count)&offset=\(offset)&sort=\(sortType)"
+    func getBuildings(offset: Int, count: Int, sortType: String,
+                      priseFrom: String, priceTo: String,
+                      onComplete: @escaping ([BuildingResult]) -> Void) {
+        let urlString = "\(apiUrl)/blocks/search?show_type=list&count=\(count)&offset=\(offset)&sort=\(sortType)&price_from=\(priseFrom)&price_to=\(priceTo)"
         guard let url = URL(string: urlString) else {
             return
         }

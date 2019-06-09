@@ -20,4 +20,15 @@ class ViewControllersFactory {
         return view
     }
     
+    static func makeDropDownMenu(_ priseList: [Int],
+                                 searchList: SearchListViewController) -> UIViewController {
+        let view = DropdownMenuTableViewController()
+        let presenter = DropdownMenuPresenter(view: view, priceList: priseList,
+                                              searchList: searchList)
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
 }

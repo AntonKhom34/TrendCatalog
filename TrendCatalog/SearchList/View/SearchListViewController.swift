@@ -9,19 +9,37 @@
 import UIKit
 import MBProgressHUD
 
+enum PriceType: String {
+    case typePriceFrom
+    case typePriceTo
+    
+    var key: String {
+        return self.rawValue
+    }
+}
+
 class SearchListViewController: UIViewController {
     private let footerHeight: CGFloat = 60
     private let footerButtonBorderWidth: CGFloat = 1
+    private var priceListFrom: [Int] = []
+    private var priceListTo: [Int] = []
+    var priceType: PriceType = .typePriceFrom
     
     private static let commentCellId = "commentCell"
 
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var priceFromButton: UIButton!
+    @IBOutlet weak var priceToButton: UIButton!
+    @IBOutlet weak var priceFromLabel: UILabel!
+    @IBOutlet weak var priceToLabel: UILabel!
     
     // MARK: - Properties
     
     var presenter: SearchListPresenterProtocol!
+    var priceFrom = ""
+    var priceTo = ""
 
     // MARK: - Override
     
@@ -29,27 +47,40 @@ class SearchListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        setupPriceListFromAndTo()
+        setupLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        presenter.onViewWillAppear()
+        presenter.onViewWillAppear(priceFrom: priceFrom, priceTo: priceTo)
     }
     
     // MARK: - Events
     
     @IBAction func tapedSortedPrice(_ sender: Any) {
-        presenter.onSortChangedWithType(.price)
+        presenter.onSortChangedWithType(.price, priceFrom: priceFrom, priceTo: priceTo)
     }
     @IBAction func tapedSortedRegion(_ sender: Any) {
-        presenter.onSortChangedWithType(.region)
+        presenter.onSortChangedWithType(.region, priceFrom: priceFrom, priceTo: priceTo)
     }
     @IBAction func tapedSortedSubways(_ sender: Any) {
-        presenter.onSortChangedWithType(.subway)
+        presenter.onSortChangedWithType(.subway, priceFrom: priceFrom, priceTo: priceTo)
     }
-    
-    
+    @IBAction func tapedPriceFromButton(_ sender: Any) {
+        priceType = .typePriceFrom
+        let viewController = ViewControllersFactory.makeDropDownMenu(priceListFrom,
+                                                                     searchList: self)
+        makeDropDownTable(viewController, self.priceFromButton)
+    }
+    @IBAction func tapedPricrToButton(_ sender: Any) {
+        priceType = .typePriceTo
+        let viewController = ViewControllersFactory.makeDropDownMenu(priceListTo,
+                                                                     searchList: self)
+        makeDropDownTable(viewController, self.priceToButton)
+    }
+
     // MARK: - Private
     
     func setupTableView() {
@@ -58,6 +89,40 @@ class SearchListViewController: UIViewController {
                            forCellReuseIdentifier: SearchListViewController.commentCellId)
         tableView.separatorColor = UIColor.clear
         setupFooterTableView()
+    }
+    
+    func makeDropDownTable(_ vc: UIViewController ,_ button: UIButton) {
+        
+        vc.modalPresentationStyle = .popover
+        let popOverVC = vc.popoverPresentationController
+        popOverVC?.delegate = self
+        popOverVC?.sourceView = button
+        popOverVC?.sourceRect = CGRect(x: button.bounds.midX, y: button.bounds.maxY,
+                                       width: 0, height: 0)
+        vc.preferredContentSize = CGSize(width: 180, height: 250)
+        
+        self.present(vc, animated: true)
+        
+    }
+    
+    func setupPriceListFromAndTo() {
+        for index in 0...9 {
+        priceListFrom += [1000000 + index * 500000]
+        priceListTo += [1500000 + index * 500000]
+        }
+    }
+    
+    func setupLabel() {
+        priceFromLabel.text = "Цена от"
+        priceToLabel.text = "Цена до"
+    }
+    
+    // MARK: - Public
+    
+    func setupPriceListTo(_ from: Int) {
+        for index in 0...9 {
+        priceListTo[index] = from + 500000 + index * 500000
+        }
     }
     
     // MARK: - FooterTableVie
@@ -153,7 +218,15 @@ extension SearchListViewController: SearchListViewProtocol {
         tableView.tableFooterView?.isHidden = false
     }
     
-    func tapedLoadTenButton() {
-        presenter.onLoadTenButtonTapped()
+    func tapedLoadTenButton(priceFrom: String, priceTo: String) {
+        presenter.onLoadTenButtonTapped(priceFrom: priceFrom, priceTo: priceTo)
+    }
+}
+
+// MARK: - UIPopoverPresentationControllerDelegate
+
+extension SearchListViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }

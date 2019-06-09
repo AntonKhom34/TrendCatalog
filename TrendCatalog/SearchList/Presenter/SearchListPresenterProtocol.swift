@@ -14,7 +14,7 @@ protocol SearchListPresenterProtocol {
     
     func getBuildingItem(atIndex: Int) -> BuildingResultProtocol
     func getBuildingItemsCount() -> Int
-    func onViewWillAppear()
-    func onLoadTenButtonTapped()
-    func onSortChangedWithType(_ type: SortType)
+    func onViewWillAppear(priceFrom: String, priceTo: String)
+    func onLoadTenButtonTapped(priceFrom: String, priceTo: String)
+    func onSortChangedWithType(_ type: SortType, priceFrom: String, priceTo: String)
 }

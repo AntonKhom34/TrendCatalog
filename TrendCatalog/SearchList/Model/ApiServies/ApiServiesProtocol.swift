@@ -10,5 +10,7 @@ import Foundation
 
 protocol ApiServiesProtocol {
     
-    func getBuildings(offset: Int, count: Int, sortType: String, onComplete: @escaping ([BuildingResult]) -> Void)
+    func getBuildings(offset: Int, count: Int, sortType: String,
+                      priseFrom: String, priceTo: String,
+                      onComplete: @escaping ([BuildingResult]) -> Void)
 }

@@ -15,7 +15,7 @@ class FooterView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var loadTenButton: UIButton!
     
-    weak var viewSearchList: SearchListViewProtocol?
+    weak var viewSearchList: SearchListViewController?
 
     // MARK: - Init
     
@@ -41,7 +41,8 @@ class FooterView: UIView {
     // MARK: - Events
     
     @IBAction func tapedLoadTenButton(_ sender: Any) {
-        viewSearchList?.tapedLoadTenButton()
+        viewSearchList?.tapedLoadTenButton(priceFrom: viewSearchList?.priceFrom ?? "",
+                                           priceTo: viewSearchList?.priceTo ?? "")
     }
     
 }

@@ -18,9 +18,11 @@ class SearchListDataProvider {
 }
 
 extension SearchListDataProvider: SearchListDataProviderProtocol {
-    
     func getBuildings(offset: Int, count: Int, sortType: String,
+                      priseFrom: String, priceTo: String,
                       onComplete: @escaping ([BuildingResult]) -> ()) {
-        service.getBuildings(offset: offset, count: count, sortType: sortType, onComplete: onComplete)
+        service.getBuildings(offset: offset, count: count, sortType: sortType,
+                             priseFrom: priseFrom, priceTo: priceTo,
+                             onComplete: onComplete)
     }
 }

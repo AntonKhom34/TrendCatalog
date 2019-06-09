@@ -10,5 +10,7 @@ import Foundation
 
 protocol SearchListDataProviderProtocol {
     
-    func getBuildings(offset: Int, count: Int, sortType: String, onComplete: @escaping ([BuildingResult]) -> ())
+    func getBuildings(offset: Int, count: Int, sortType: String,
+                      priseFrom: String, priceTo: String,
+                      onComplete: @escaping ([BuildingResult]) -> ())
 }
