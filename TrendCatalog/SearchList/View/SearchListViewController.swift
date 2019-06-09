@@ -7,21 +7,24 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class SearchListViewController: UIViewController {
+    private let footerHeight: CGFloat = 60
+    private let footerButtonBorderWidth: CGFloat = 1
     
     private static let commentCellId = "commentCell"
 
     // MARK: - Outlets
     
-    @IBOutlet weak var loadTen: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
     var presenter: SearchListPresenterProtocol!
-    
 
+    // MARK: - Override
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,9 +39,6 @@ class SearchListViewController: UIViewController {
     
     // MARK: - Events
     
-    @IBAction func reloadTab(_ sender: Any) {
-        presenter.onLoadTenButtonTapped()
-    }
     @IBAction func tapedSortedPrice(_ sender: Any) {
         presenter.onSortChangedWithType(.price)
     }
@@ -57,15 +57,29 @@ class SearchListViewController: UIViewController {
         tableView.register(UINib(nibName: CommentCell.nibName, bundle: nil),
                            forCellReuseIdentifier: SearchListViewController.commentCellId)
         tableView.separatorColor = UIColor.clear
+        setupFooterTableView()
     }
     
-    func reloadTable() {
-        tableView.reloadData()
+    // MARK: - FooterTableVie
+    
+    func setupFooterTableView() {
+        let viewFooterView = FooterView()
+        viewFooterView.sizeToFit()
+        viewFooterView.frame.size.height = footerHeight
+        viewFooterView.viewSearchList = self
+        
+        viewFooterView.loadTenButton.layer.borderWidth = footerButtonBorderWidth
+        viewFooterView.loadTenButton.layer.borderColor = UIColor.black.cgColor
+        
+        tableView.tableFooterView = viewFooterView
     }
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension SearchListViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.getBuildingItemsCount()
     }
@@ -121,5 +135,25 @@ extension SearchListViewController: UITableViewDataSource {
     
 }
 
+// MARK: - SearchListViewProtocol
+
 extension SearchListViewController: SearchListViewProtocol {
+    
+    func reloadTable() {
+        tableView.reloadData()
+    }
+
+    func startPreloader() {
+        MBProgressHUD.showAdded(to: view, animated: true).isUserInteractionEnabled = true
+        tableView.tableFooterView?.isHidden = true
+    }
+
+    func stopPreloader() {
+        MBProgressHUD.hide(for: view, animated: true)
+        tableView.tableFooterView?.isHidden = false
+    }
+    
+    func tapedLoadTenButton() {
+        presenter.onLoadTenButtonTapped()
+    }
 }

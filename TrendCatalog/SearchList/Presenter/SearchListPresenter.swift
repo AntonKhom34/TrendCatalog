@@ -38,8 +38,6 @@ class SearchListPresenter {
         sortType = .price
     }
     
-// MARK: - Public
-    
 }
 
 // MARK: - SearchListPresenterProtocol
@@ -63,12 +61,15 @@ extension SearchListPresenter: SearchListPresenterProtocol  {
     }
     
     func onLoadTenButtonTapped() {
+        view.startPreloader()
         provider.getBuildings(offset: buildings.count,
                               count: packBuildingsCount,
                               sortType: sortType.key) { [weak self] buildings in
             guard let strongSelf = self else {
                 return
             }
+        
+            strongSelf.view.stopPreloader()
             strongSelf.buildings.append(contentsOf: buildings)
             strongSelf.view.reloadTable()
         }
@@ -82,10 +83,12 @@ extension SearchListPresenter: SearchListPresenterProtocol  {
     // MARK: - Private
 
     private func initStartBuildings() {
+        view.startPreloader()
         provider.getBuildings(offset: 0, count: startBuildingsCount, sortType: sortType.key) { [weak self] buildings in
             guard let strongSelf = self else {
                 return
             }
+            strongSelf.view.stopPreloader()
             strongSelf.buildings = buildings
             strongSelf.view.reloadTable()
         }

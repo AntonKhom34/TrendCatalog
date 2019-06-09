@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchListViewController" customModule="TrendCatalog" customModuleProvider="target">
             <connections>
-                <outlet property="loadTen" destination="H6N-Re-O0N" id="Zmp-Jd-8PA"/>
                 <outlet property="tableView" destination="U1c-f8-8DO" id="xVS-Hg-dMg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -96,33 +95,20 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U1c-f8-8DO">
-                            <rect key="frame" x="0.0" y="93" width="414" height="695"/>
+                            <rect key="frame" x="0.0" y="93" width="414" height="725"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6N-Re-O0N">
-                            <rect key="frame" x="0.0" y="788" width="414" height="30"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Загрузить еще 10">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="reloadTab:" destination="-1" eventType="touchUpInside" id="Yka-LT-FeI"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="B1I-ro-mVT"/>
                         <constraint firstItem="TG6-yT-m9g" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="BF9-4K-Tjo"/>
-                        <constraint firstAttribute="trailing" secondItem="H6N-Re-O0N" secondAttribute="trailing" id="OwL-Y3-pDh"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="RLA-UQ-qmR"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="top" secondItem="U1c-f8-8DO" secondAttribute="bottom" id="ViF-r4-lwm"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="ZwM-wA-EoN"/>
                         <constraint firstItem="LTC-wD-QRk" firstAttribute="top" secondItem="bGA-Me-NWQ" secondAttribute="top" id="e0p-hq-uDT"/>
                         <constraint firstAttribute="trailing" secondItem="LTC-wD-QRk" secondAttribute="trailing" id="gKX-1x-jyL"/>
                         <constraint firstItem="U1c-f8-8DO" firstAttribute="top" secondItem="TG6-yT-m9g" secondAttribute="bottom" id="hGp-VJ-8bN"/>
-                        <constraint firstItem="H6N-Re-O0N" firstAttribute="leading" secondItem="bGA-Me-NWQ" secondAttribute="leading" id="mE4-Sx-n6N"/>
                         <constraint firstItem="TG6-yT-m9g" firstAttribute="top" secondItem="LTC-wD-QRk" secondAttribute="bottom" id="pBK-Wy-DtV"/>
-                        <constraint firstAttribute="bottom" secondItem="H6N-Re-O0N" secondAttribute="bottom" id="v5p-Ho-UTn"/>
                         <constraint firstAttribute="trailing" secondItem="TG6-yT-m9g" secondAttribute="trailing" id="vHQ-ip-LuA"/>
                         <constraint firstAttribute="trailing" secondItem="U1c-f8-8DO" secondAttribute="trailing" id="zTw-sx-u3u"/>
                     </constraints>
